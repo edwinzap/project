@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+    width:100%;
+    font-family: "Segoe UI",Arial,sans-serif;
+    padding:0;
+    background-color: whitesmoke;
+}
+#header
+{
+    width: 100%;
+    background-color: cadetblue;
+    color:whitesmoke;
+    padding:5px;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    text-align: center;
+    border-bottom: groove black 5px;
+    text-shadow: darkslategrey 3px 3px;
+    z-index: 50;
+}
+#content{
+    min-height: 100%;
+    min-width:200px;
+    max-width: 800px;
+    width: 60%;
+    margin:auto;
+    padding: 120px 50px 50px;
+    background-color: mediumaquamarine;
+}
+#footer{
+    background-color: darkslategray;
+    color: whitesmoke;
+    position: relative;
+    bottom:0;
+    right:0;
+    left:0;
+    text-align: center;
+    padding:5px;
+    z-index: 50;
+}
+p {
+    line-height: 16px;
+}
+img{
+    width: 100%;
+}
+#tableau{
+    display: flex;
+}
+.contact{
+    margin: auto;
+
+}
+#speedometer {
+
+    padding:20px;
+    z-index: 10;
+    /*Parent de #aiguille => doit être en relative pour que #aiguille se place correctement*/
+    position:relative;
+}
+
+#aiguille{
+    z-index: 11;
+    width:60%;
+    z-index: 11;
+    position:absolute;
+    top:19.5%;
+
+    /*Centre le div malgré la position absolute*/
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right:0;
+}
+#pedales {
+    display:flex;
+    max-width: 80%;
+    margin:auto;
+
+}
+
+#pedales input{
+    margin: 0px 20px;
+    max-width: 200px;
+    min-width: 20px;
+    height:100%;
+    margin: auto 1.5em 0;
+}
