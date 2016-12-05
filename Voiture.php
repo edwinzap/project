@@ -12,6 +12,7 @@ class Voiture
     private $vitesse=0;
     private $freinMain = true;
     private $contact = false;
+    public $positionPhare = 0;
 
     function __construct()
     {
@@ -22,11 +23,10 @@ class Voiture
     function changeContact(){
         if($this->contact == false){
             $this->contact = true;
-            return "Démarrage";
         }
         else{
             $this->contact = false;
-            return "Arret";
+            $this->vitesse=0;
         }
     }
     function accelere(){
@@ -35,9 +35,6 @@ class Voiture
             if ($this->freinMain==true){
                 $this->vitesse+=10;
                 $this->printVitesse();
-            }
-            else{
-                return "Veillez retirer le frein à main";
             }
         }
     }
@@ -53,14 +50,13 @@ class Voiture
         if ($this->freinMain==true)
         {
             $this->freinMain=false;
-            return "Frein à main retiré";
         }
         else
         {
             $this->freinMain=true;
-            return "Frein à main mis";
         }
     }
+
 
     /*Function Get*/
     function getVitesse(){
@@ -68,6 +64,9 @@ class Voiture
     }
     function getFreinMain(){
         return $this->freinMain();
+    }
+    function getContact(){
+        return $this->contact;
     }
 
     /*Functions Print*/
